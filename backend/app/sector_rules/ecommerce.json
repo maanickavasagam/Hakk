@@ -1,0 +1,86 @@
+{
+  "sector": "ecommerce",
+  "label": "E-commerce",
+  "blurb": "Online marketplaces and sellers — orders, refunds, returns, delivery failures, cancellations.",
+  "primary_statute": "Consumer Protection Act, 2019",
+  "bundle_price_paise": 14900,
+  "keywords": [
+    "amazon", "flipkart", "myntra", "meesho", "ajio", "nykaa", "snapdeal", "blinkit",
+    "zepto", "swiggy", "zomato", "bigbasket", "order", "refund", "return", "delivery",
+    "parcel", "courier", "shipment", "seller", "marketplace", "cart", "checkout",
+    "cod", "cash on delivery", "product", "damaged", "wrong item", "cancelled order",
+    "e-commerce", "online shopping"
+  ],
+  "stages": [
+    {
+      "key": "grievance_officer",
+      "name": "Grievance Officer Complaint",
+      "authority": "Company Grievance Officer",
+      "summary": "Formal written complaint to the e-commerce entity's designated Grievance Officer. This is the mandatory first rung — later forums will ask for proof that you raised it here.",
+      "deadline_days": 30,
+      "ack_hours": 48,
+      "regulation": "Consumer Protection (E-Commerce) Rules, 2020 — Rule 4(5)",
+      "regulation_note": "Every e-commerce entity must appoint a Grievance Officer, acknowledge receipt of a consumer complaint within forty-eight hours, and redress the complaint within one month from the date of receipt.",
+      "source_url": "https://consumeraffairs.nic.in/",
+      "required_documents": [
+        "Order confirmation or tax invoice",
+        "Payment proof (bank/UPI/card statement line)",
+        "Screenshots of the product listing as advertised",
+        "Any prior chat or email with customer support"
+      ],
+      "price_paise": 4900
+    },
+    {
+      "key": "nodal_officer",
+      "name": "Nodal Officer Escalation",
+      "authority": "Nodal Person of Contact / Senior Designated Functionary",
+      "summary": "Escalation to the marketplace's nodal contact — a compliance officer every e-commerce entity must appoint, distinct from the consumer-facing Grievance Officer. The Rules require this appointment but do not fix a response deadline for it the way they do for the Grievance Officer, so the window below is Hakk's own practical escalation checkpoint, not a statutory one.",
+      "deadline_days": 15,
+      "ack_hours": null,
+      "regulation": "Consumer Protection (E-Commerce) Rules, 2020 — Rule 4(1)(b)",
+      "regulation_note": "Rule 4(1)(b) requires every e-commerce entity to appoint a nodal person of contact, or an alternate senior designated functionary resident in India, whose stated purpose under the Rule is to ensure the entity's compliance with the Act and Rules generally — it is not itself defined as a second-tier consumer-complaint handler with its own acknowledgment or resolution window the way Rule 4(5)'s Grievance Officer is. Escalating to this contact in writing is still useful practice (it strengthens the record before the National Consumer Helpline or Commission stage), but nothing in the Rules obliges a reply within a fixed period.",
+      "source_url": "https://consumeraffairs.nic.in/theconsumerprotection/consumer-protection-e-commerce-rules-2020",
+      "required_documents": [
+        "Copy of the Stage 1 grievance and its reference/ticket number",
+        "Proof of delivery of the Stage 1 complaint (email receipt)",
+        "Record of no response or an inadequate response"
+      ],
+      "price_paise": 4900
+    },
+    {
+      "key": "national_consumer_helpline",
+      "name": "National Consumer Helpline (NCH / INGRAM)",
+      "authority": "National Consumer Helpline, Dept. of Consumer Affairs",
+      "summary": "Free pre-litigation mediation through the government helpline (1915, also on WhatsApp/SMS) and the INGRAM (Integrated Grievance Redressal Mechanism) portal, which forwards the complaint in real time to the company's registered convergence partner desk.",
+      "deadline_days": 30,
+      "ack_hours": null,
+      "regulation": "National Consumer Helpline, Department of Consumer Affairs (INGRAM) — pre-litigation grievance redressal",
+      "regulation_note": "NCH is advisory and mediatory, not adjudicatory — it has no power to pass a binding order, and there is no statute fixing its timeline the way there is for the Grievance Officer or the District Commission. In practice, a company registered as an NCH convergence partner is expected to respond to a forwarded complaint within 30 days; that operational expectation, not a legal deadline, is what's shown here. The docket number generated is still useful evidence of a genuine pre-litigation attempt at the Commission stage.",
+      "source_url": "https://consumerhelpline.gov.in/about-portal.php",
+      "required_documents": [
+        "Complete correspondence trail from Stages 1 and 2",
+        "Order and payment records",
+        "A single-page summary of the relief you are seeking"
+      ],
+      "price_paise": 4900
+    },
+    {
+      "key": "edaakhil",
+      "name": "District Consumer Commission (e-Daakhil)",
+      "authority": "District Consumer Disputes Redressal Commission",
+      "summary": "Formal adjudicatory complaint filed online through e-Daakhil. This is a litigation step — the draft Hakk prepares is a complaint petition, and this is the point where legal representation is usually worth considering.",
+      "deadline_days": 21,
+      "ack_hours": null,
+      "regulation": "Consumer Protection Act, 2019 — Sections 34, 35, 36(2) and 69",
+      "regulation_note": "Section 34(1) gives the District Commission jurisdiction where the value of goods or services paid as consideration does not exceed one crore rupees. Section 35 sets out who may file and how. Section 36(2)'s second proviso requires admissibility to be decided 'ordinarily... within twenty-one days from the date on which the complaint was filed.' Section 69(1) bars a complaint filed more than two years after the cause of action arose, unless delay is condoned under Section 69(2) for sufficient cause.",
+      "source_url": "https://edaakhil.nic.in/",
+      "required_documents": [
+        "Complete case file from all previous stages",
+        "Affidavit verifying the complaint",
+        "Index of documents with page numbering",
+        "Proof of payment of the prescribed filing fee"
+      ],
+      "price_paise": 4900
+    }
+  ]
+}

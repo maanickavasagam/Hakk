@@ -1,0 +1,26 @@
+# Secrets — never commit
+.env
+backend/.env
+*.env
+!.env.example
+
+# Python
+backend/.venv/
+__pycache__/
+*.pyc
+
+# Database
+backend/*.db
+backend/hakk_test.db
+
+# Uploaded user files
+backend/uploads/*
+!backend/uploads/.gitkeep
+
+# Node / frontend
+frontend/node_modules/
+frontend/dist/
+
+# OS / editor
+.DS_Store
+Thumbs.db

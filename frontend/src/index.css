@@ -1,0 +1,307 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  /* ------------------------------------------------------------------ *
+   * The palette lives here, once, as channel triplets that
+   * tailwind.config.js reads through rgb(var(--x) / <alpha-value>).
+   * Every screen already speaks in semantic tokens — bg-canvas, text-ink,
+   * border-line — so re-pointing these variables themes the entire app
+   * without a single `dark:` class anywhere in the pages.
+   * ------------------------------------------------------------------ */
+  :root {
+    color-scheme: light;
+
+    --c-canvas: 250 250 248;
+    --c-canvas-sunk: 244 243 238;
+    --c-surface: 255 255 255;
+    --c-surface-warm: 252 252 250;
+
+    --c-ink: 36 38 31;
+    --c-ink-soft: 73 77 66;
+    --c-ink-muted: 118 123 108;
+    --c-ink-faint: 164 168 153;
+    --c-ink-inverse: 250 250 248;
+
+    --c-line: 233 232 224;
+    --c-line-soft: 241 240 234;
+    --c-line-strong: 216 215 204;
+
+    --c-powder-50: 243 248 243;
+    --c-powder-100: 230 241 231;
+    --c-powder-200: 200 230 201;
+    --c-powder-300: 165 214 167;
+    --c-powder-400: 138 202 141;
+    --c-powder-500: 107 174 112;
+    --c-powder-600: 85 146 90;
+    --c-powder-700: 66 112 71;
+    --c-powder-800: 52 86 57;
+    --c-powder-900: 38 63 42;
+
+    --c-clay-100: 247 237 228;
+    --c-clay-300: 226 188 150;
+    --c-clay-500: 192 138 62;
+    --c-clay-700: 140 97 34;
+
+    --c-rust-100: 248 234 230;
+    --c-rust-300: 224 168 153;
+    --c-rust-500: 180 85 63;
+    --c-rust-700: 130 52 36;
+
+    --c-shadow: 36 38 31;
+    --shadow-boost: 1;
+
+    --scrollbar-thumb: #dcdbd2;
+    --scrollbar-thumb-hover: #c6c5ba;
+  }
+
+  /* Dark is a deliberate re-point, not an inversion.
+   *
+   * The base is a warm near-black carrying the same green undertone as the
+   * light canvas, so the sage accent still belongs to it. The ordering of the
+   * powder and status scales is flipped: components pair a low number as a
+   * tinted background with a high number as the text on it (bg-powder-100 +
+   * text-powder-900), so in dark the low end becomes a deep muted green and
+   * the high end a light one. Keeping that contract is what lets every
+   * existing class in every page work untouched. */
+  [data-theme='dark'] {
+    color-scheme: dark;
+
+    --c-canvas: 22 24 21;
+    --c-canvas-sunk: 17 19 16;
+    --c-surface: 30 33 28;
+    --c-surface-warm: 26 29 25;
+
+    --c-ink: 237 238 231;
+    --c-ink-soft: 199 203 190;
+    --c-ink-muted: 152 157 143;
+    --c-ink-faint: 113 119 105;
+    --c-ink-inverse: 22 24 21;
+
+    --c-line: 51 55 47;
+    --c-line-soft: 41 45 38;
+    --c-line-strong: 71 76 65;
+
+    /* Flipped: 50 is now the deepest tint, 900 the lightest text. */
+    --c-powder-50: 30 40 31;
+    --c-powder-100: 38 51 39;
+    --c-powder-200: 51 69 52;
+    --c-powder-300: 74 100 76;
+    --c-powder-400: 108 152 111;
+    --c-powder-500: 134 182 138;
+    --c-powder-600: 158 203 161;
+    --c-powder-700: 178 217 180;
+    --c-powder-800: 200 230 201;
+    --c-powder-900: 219 240 220;
+
+    --c-clay-100: 52 41 28;
+    --c-clay-300: 110 82 47;
+    --c-clay-500: 214 165 96;
+    --c-clay-700: 236 205 160;
+
+    --c-rust-100: 56 34 28;
+    --c-rust-300: 114 65 51;
+    --c-rust-500: 214 131 108;
+    --c-rust-700: 240 194 179;
+
+    --c-shadow: 0 0 0;
+    --shadow-boost: 3;
+
+    --scrollbar-thumb: #3a3f35;
+    --scrollbar-thumb-hover: #4d5346;
+  }
+
+  html {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-canvas text-ink font-sans antialiased;
+    font-feature-settings: 'cv02', 'cv03', 'cv04', 'ss01';
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    @apply font-display text-ink;
+    font-variation-settings: 'SOFT' 28, 'WONK' 1;
+    text-wrap: balance;
+  }
+
+  p {
+    text-wrap: pretty;
+  }
+
+  /* Focus rings inherit the accent rather than the default Tailwind blue. */
+  *:focus-visible {
+    @apply outline-none ring-2 ring-powder-400/70 ring-offset-2 ring-offset-canvas rounded-lg;
+  }
+
+  ::selection {
+    @apply bg-powder-200 text-powder-900;
+  }
+
+  /* Quiet, thin scrollbars that match the palette. */
+  * {
+    scrollbar-width: thin;
+    scrollbar-color: var(--scrollbar-thumb) transparent;
+  }
+  *::-webkit-scrollbar {
+    width: 9px;
+    height: 9px;
+  }
+  *::-webkit-scrollbar-thumb {
+    background: var(--scrollbar-thumb);
+    border-radius: 99px;
+    border: 2px solid transparent;
+    background-clip: content-box;
+  }
+  *::-webkit-scrollbar-thumb:hover {
+    background: var(--scrollbar-thumb-hover);
+    background-clip: content-box;
+  }
+
+  input,
+  textarea,
+  select {
+    @apply font-sans;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+      scroll-behavior: auto !important;
+    }
+  }
+}
+
+@layer components {
+  /* ---- Surfaces ------------------------------------------------------ */
+  .card {
+    @apply bg-surface border border-line rounded-3xl shadow-soft;
+  }
+
+  .card-lift {
+    @apply card transition-all duration-220 ease-gentle hover:shadow-lift hover:border-line-strong hover:-translate-y-0.5;
+  }
+
+  .panel {
+    @apply bg-surface-warm border border-line-soft rounded-2xl;
+  }
+
+  /* ---- Buttons ------------------------------------------------------- */
+  .btn {
+    @apply inline-flex items-center justify-center gap-2 rounded-full font-medium
+           transition-all duration-180 ease-gentle select-none
+           disabled:opacity-45 disabled:pointer-events-none whitespace-nowrap;
+  }
+
+  .btn-primary {
+    @apply btn bg-powder-700 text-canvas px-6 py-3 text-[0.9375rem] shadow-soft
+           hover:bg-powder-800 hover:shadow-lift active:translate-y-px;
+  }
+
+  .btn-accent {
+    @apply btn bg-powder-200 text-powder-900 px-6 py-3 text-[0.9375rem]
+           hover:bg-powder-300 active:translate-y-px;
+  }
+
+  .btn-ghost {
+    @apply btn border border-line text-ink-soft px-5 py-2.5 text-sm bg-surface
+           hover:border-powder-300 hover:text-powder-800 hover:bg-powder-50 active:translate-y-px;
+  }
+
+  .btn-quiet {
+    @apply btn text-ink-muted px-3 py-2 text-sm hover:text-ink hover:bg-canvas-sunk;
+  }
+
+  .btn-sm {
+    @apply px-4 py-2 text-[0.8125rem];
+  }
+
+  /* ---- Form controls -------------------------------------------------- */
+  .field {
+    @apply w-full rounded-2xl border border-line bg-surface px-4 py-3 text-[0.9375rem]
+           text-ink placeholder:text-ink-faint transition-all duration-180 ease-gentle
+           hover:border-line-strong focus:border-powder-400 focus:ring-4 focus:ring-powder-200/50 focus:outline-none;
+  }
+
+  .field-label {
+    @apply block font-display text-lg text-ink mb-1.5;
+  }
+
+  .field-help {
+    @apply block text-sm text-ink-muted mb-3 leading-relaxed;
+  }
+
+  /* ---- Type ----------------------------------------------------------- */
+  .eyebrow {
+    @apply text-2xs font-semibold uppercase tracking-[0.16em] text-ink-muted;
+  }
+
+  .lede {
+    @apply text-lg leading-relaxed text-ink-soft;
+  }
+
+  /* ---- Status pills ---------------------------------------------------- */
+  .pill {
+    @apply inline-flex items-center gap-1.5 rounded-full px-3 py-1 text-2xs font-semibold uppercase tracking-[0.09em];
+  }
+  .pill-green {
+    @apply pill bg-powder-100 text-powder-800;
+  }
+  .pill-neutral {
+    @apply pill bg-canvas-sunk text-ink-muted;
+  }
+  .pill-clay {
+    @apply pill bg-clay-100 text-clay-700;
+  }
+  .pill-rust {
+    @apply pill bg-rust-100 text-rust-700;
+  }
+
+  .hairline {
+    @apply border-t border-line-soft;
+  }
+
+  /* Staggered page entrance — content arrives, it doesn't snap in. */
+  .stagger > * {
+    animation: fade-up 520ms cubic-bezier(0.32, 0.72, 0.28, 1) both;
+  }
+  .stagger > *:nth-child(1) { animation-delay: 0ms; }
+  .stagger > *:nth-child(2) { animation-delay: 70ms; }
+  .stagger > *:nth-child(3) { animation-delay: 140ms; }
+  .stagger > *:nth-child(4) { animation-delay: 210ms; }
+  .stagger > *:nth-child(5) { animation-delay: 280ms; }
+  .stagger > *:nth-child(6) { animation-delay: 350ms; }
+  .stagger > *:nth-child(7) { animation-delay: 420ms; }
+  .stagger > *:nth-child(8) { animation-delay: 490ms; }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+  /* Faint sage wash — used sparingly behind hero and rail areas. Reads off the
+     powder scale so it follows the theme; in dark it becomes a deep green
+     bloom rather than a pale one. */
+  .wash-sage {
+    background-image: radial-gradient(
+        ellipse 60% 50% at 15% 0%,
+        rgb(var(--c-powder-200) / 0.4) 0%,
+        transparent 62%
+      ),
+      radial-gradient(ellipse 50% 40% at 92% 8%, rgb(var(--c-powder-100) / 0.6) 0%, transparent 60%);
+  }
+  .grain {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3'/%3E%3C/filter%3E%3Crect width='140' height='140' filter='url(%23n)' opacity='0.028'/%3E%3C/svg%3E");
+  }
+}

@@ -1,0 +1,69 @@
+{
+  "sector": "telecom",
+  "label": "Telecom & Broadband",
+  "blurb": "Mobile, broadband and DTH — billing disputes, service outages, plan changes, porting and disconnection.",
+  "primary_statute": "Telecom Consumers Complaint Redressal Regulations, 2012",
+  "bundle_price_paise": 8900,
+  "keywords": [
+    "airtel", "jio", "vodafone", "vi", "bsnl", "mtnl", "act fibernet", "hathway",
+    "tata play", "dish tv", "sim", "mobile", "recharge", "broadband", "fiber",
+    "internet", "network", "signal", "call drop", "data pack", "postpaid",
+    "prepaid", "bill", "billing", "plan", "porting", "mnp", "dth", "landline",
+    "disconnection", "roaming", "telecom"
+  ],
+  "stages": [
+    {
+      "key": "complaint_centre",
+      "name": "Complaint Centre Docket",
+      "authority": "Service provider's Complaint Centre",
+      "summary": "Register the complaint with the operator's toll-free Complaint Centre. A docket number is allotted immediately and an SMS confirms it along with the expected resolution time — without that docket number the Appellate Authority will not entertain a later appeal.",
+      "deadline_days": 3,
+      "ack_hours": null,
+      "regulation": "Telecom Consumers Complaint Redressal Regulations, 2012 — Regulations 7 and 8(2)",
+      "regulation_note": "Regulation 7 requires the Complaint Centre to register a complaint immediately on receipt and allot a unique docket number, communicated to the consumer by SMS with the date, time and expected resolution time. Regulation 8(2), as substituted by the Second Amendment Regulations, 2013 (w.e.f. 11.09.2013), requires the complaint to be addressed within three days where no shorter period is separately fixed under the Quality of Service regulations.",
+      "source_url": "https://www.trai.gov.in/sites/default/files/2024-09/CA_05012012.pdf",
+      "required_documents": [
+        "Your mobile / account number and the plan you are on",
+        "Copy of the disputed bill or recharge receipt",
+        "Date, time and docket number of the complaint",
+        "Screenshots of outages or speed tests, if service quality is the issue"
+      ],
+      "price_paise": 4900
+    },
+    {
+      "key": "appellate_authority",
+      "name": "Appeal to the Appellate Authority",
+      "authority": "Appellate Authority (advised by the Advisory Committee)",
+      "summary": "A formal appeal to the operator's Appellate Authority — established under the regulations and advised by a two-member Advisory Committee that includes a consumer-organisation representative. Filing is free, and there is no separate Nodal Officer tier under this regulation; the appeal goes directly to the Appellate Authority.",
+      "deadline_days": 39,
+      "ack_hours": 72,
+      "regulation": "Telecom Consumers Complaint Redressal Regulations, 2012 — Regulations 9 to 14",
+      "regulation_note": "Regulation 9 lets a consumer appeal if the Complaint Centre's redressal is unsatisfactory, the complaint stays unaddressed, or no intimation is received within the Regulation 8 period — the appeal must be filed within 30 days of that period expiring (condonable up to three months for sufficient cause), free of charge. The Secretariat then acknowledges the appeal within 3 days, forwards it to the service provider for a reply within 7 days, places it before the Advisory Committee within 2 days of that reply, the Advisory Committee advises within 15 days, and the Appellate Authority passes a reasoned order within 10 days of the appeal being placed before it — a worst-case disposal window of 39 days from the appeal reaching the Secretariat.",
+      "source_url": "https://www.trai.gov.in/sites/default/files/2024-09/CA_05012012.pdf",
+      "required_documents": [
+        "Docket number and date from Stage 1",
+        "Record of the Complaint Centre's response, or the absence of one",
+        "Statement of the relief sought, with amounts"
+      ],
+      "price_paise": 4900
+    },
+    {
+      "key": "commission_and_dot",
+      "name": "Consumer Commission / DoT PG Portal",
+      "authority": "District Consumer Commission (e-Daakhil) and DoT Public Grievance portal",
+      "summary": "Final escalation. TRAI regulates operators but does not adjudicate individual consumer claims for compensation, so monetary relief is pursued before the Consumer Commission, in parallel with a DoT public grievance entry.",
+      "deadline_days": 21,
+      "ack_hours": null,
+      "regulation": "Consumer Protection Act, 2019 — Sections 34-35 and Section 69; Department of Telecommunications Public Grievance framework",
+      "regulation_note": "TRAI's mandate under the TRAI Act is regulatory; individual claims for refund and compensation are filed before the Consumer Commission under the Consumer Protection Act, 2019, subject to the two-year limitation in Section 69. A parallel DoT public grievance entry creates additional regulatory pressure on the licensee.",
+      "source_url": "https://edaakhil.nic.in/",
+      "required_documents": [
+        "Appellate Authority order, or proof that the appeal disposal window lapsed",
+        "Full case file from all previous stages",
+        "Affidavit verifying the complaint",
+        "Computation of the compensation claimed"
+      ],
+      "price_paise": 4900
+    }
+  ]
+}

@@ -1,0 +1,69 @@
+{
+  "sector": "banking",
+  "label": "Banking & UPI",
+  "blurb": "Banks, wallets, cards and UPI — unauthorised debits, failed transfers, stuck refunds, wrongful charges.",
+  "primary_statute": "Reserve Bank - Integrated Ombudsman Scheme, 2026",
+  "bundle_price_paise": 8900,
+  "keywords": [
+    "bank", "upi", "gpay", "google pay", "phonepe", "paytm", "hdfc", "icici", "sbi",
+    "axis", "kotak", "yes bank", "idfc", "debit", "credit card", "atm", "neft",
+    "imps", "rtgs", "netbanking", "account", "transaction", "unauthorised",
+    "fraudulent transaction", "chargeback", "emi", "loan", "wallet", "npci",
+    "money deducted", "failed payment", "double debit"
+  ],
+  "stages": [
+    {
+      "key": "bank_grievance",
+      "name": "Bank Grievance Redressal Complaint",
+      "authority": "The bank / Regulated Entity",
+      "summary": "A written complaint to the bank itself — any channel counts, there is no requirement to address it to a specific officer. A complaint to the RBI Ombudsman is not maintainable until this has been made and the bank has either replied unsatisfactorily or been given its full response window.",
+      "deadline_days": 30,
+      "ack_hours": null,
+      "regulation": "Reserve Bank - Integrated Ombudsman Scheme, 2026 — Clause 10(1)(e), (f) and (l)",
+      "regulation_note": "Clause 10(1)(e) requires the complainant to have first made a complaint in writing (or any other mode, with provable proof) to the bank. Clause 10(1)(f) makes the Ombudsman complaint maintainable once 30 days pass with no reply (or the longer period, if any, specified by RBI, NPCI or the applicable Card Network) — or once the complainant is unsatisfied with the reply received. Clause 10(1)(l) requires the original complaint to the bank to have been made within the Limitation Act, 1963 period for the underlying claim.",
+      "source_url": "https://cms.rbi.org.in/",
+      "required_documents": [
+        "Bank statement page showing the disputed entry",
+        "Transaction reference / UTR / RRN number",
+        "SMS or email alert received for the transaction",
+        "Date and mode of first reporting to the bank, and proof it was made"
+      ],
+      "price_paise": 4900
+    },
+    {
+      "key": "rbi_ombudsman",
+      "name": "RBI Integrated Ombudsman (CMS portal)",
+      "authority": "Office of the RBI Ombudsman",
+      "summary": "Complaint filed free of cost on the RBI Complaint Management System. There is no cap on the amount in dispute; the Ombudsman can direct specific performance plus compensation — up to ₹30 lakh for consequential loss and a further ₹3 lakh for harassment, mental anguish or expenses incurred.",
+      "deadline_days": 30,
+      "ack_hours": null,
+      "regulation": "Reserve Bank - Integrated Ombudsman Scheme, 2026 — Clauses 10(1)(f)-(g), 14(2) and 8(3)",
+      "regulation_note": "The complaint must reach the Ombudsman within 90 days of the bank's 30-day reply window expiring, or of its last communication, whichever is later (Clause 10(1)(g)). Once registered, the bank must file its written response within 15 days (Clause 14(2)). The Scheme deliberately sets no fixed deadline for the Ombudsman's own decision — proceedings are 'summary in nature and shall not be bound by any rules of evidence' (Clause 14(1)), aimed at speed through process rather than a hard statutory clock. The 30 days shown here is Hakk's own operational checkpoint for prompting an appeal if nothing has moved, not a deadline the Scheme itself imposes.",
+      "source_url": "https://cms.rbi.org.in/",
+      "required_documents": [
+        "Complete complaint history with the bank, with dates",
+        "The bank's final response, or proof the 30-day window lapsed",
+        "Annexure computing the amount claimed, split into consequential loss and other compensation",
+        "Declaration that the matter is not pending before any other forum"
+      ],
+      "price_paise": 4900
+    },
+    {
+      "key": "appellate_authority",
+      "name": "Appeal before the Appellate Authority",
+      "authority": "Appellate Authority (Executive Director, RBI Consumer Education and Protection Department)",
+      "summary": "An appeal against the RBI Ombudsman's Award, or against a rejection under Clause 15(1), to the Appellate Authority — the Reserve Bank officer in charge of the Consumer Education and Protection Department.",
+      "deadline_days": 30,
+      "ack_hours": null,
+      "regulation": "Reserve Bank - Integrated Ombudsman Scheme, 2026 — Clause 17(3)",
+      "regulation_note": "Clause 17(3) gives the complainant 30 days from receipt of the Award to appeal, extendable by a further 30 days if the Appellate Authority is satisfied there was sufficient cause for the delay. (The bank has a narrower right of appeal under Clause 17(2) on the same timeline, and none at all against an ex-parte Award issued under Clause 15(1)(a) for non-cooperation, per Clause 17(1).) The Appellate Authority may dismiss the appeal, set aside or modify the Award, or remand the matter.",
+      "source_url": "https://cms.rbi.org.in/",
+      "required_documents": [
+        "Copy of the Ombudsman's Award or rejection order",
+        "Grounds of appeal, drafted point by point",
+        "The complete record placed before the Ombudsman"
+      ],
+      "price_paise": 4900
+    }
+  ]
+}

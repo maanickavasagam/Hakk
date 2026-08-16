@@ -1,0 +1,89 @@
+{
+  "sector": "airlines",
+  "label": "Airlines",
+  "blurb": "Flights to, from and within India — denied boarding, cancellations, long delays, downgrades and refunds.",
+  "primary_statute": "DGCA Civil Aviation Requirements, Section 3, Series M, Part IV (Rev. 4, effective 15 February 2023)",
+  "bundle_price_paise": 12900,
+  "keywords": [
+    "flight", "airline", "airlines", "boarding", "denied boarding", "bumped",
+    "overbooked", "overbooking", "cancelled flight", "flight cancelled",
+    "flight delayed", "delay", "missed connection", "connecting flight",
+    "downgraded", "downgrade", "baggage", "ticket refund", "pnr", "boarding pass",
+    "airport", "indigo", "air india", "spicejet", "akasa", "vistara", "goair",
+    "go first", "dgca", "air sewa", "airsewa", "no show", "rescheduled flight",
+    "fare refund", "travel voucher"
+  ],
+  "stages": [
+    {
+      "key": "airline_nodal_officer",
+      "name": "Complaint to the Airline's Nodal Officer",
+      "authority": "Nodal Officer of the operating airline",
+      "summary": "A written complaint to the airline itself, addressed to the Nodal Officer every airline must appoint and publish on its website. This is the first rung the CAR contemplates, and the compensation it prescribes is a fixed entitlement rather than a goodwill gesture — cite the figure, don't ask for one.",
+      "deadline_days": 15,
+      "ack_hours": null,
+      "regulation": "DGCA CAR Section 3, Series M, Part IV — Paras 3.9.1 and 3.10.4",
+      "regulation_note": "Para 3.9.1 lets a passenger affected by denied boarding, a cancellation or a long delay complain directly to the airline where it has not provided the compensation or facilities the CAR specifies. Para 3.10.4 requires every airline to appoint a Nodal Officer and an Appellate Authority to settle passenger grievances 'in a stipulated time frame' and to display both conspicuously on its website, and Para 3.10.5 requires the internal mechanism to be transparent, to accept complaints online, and to issue a unique reference number for every complaint registered. The CAR does not itself fix what that time frame is, so the 15 days shown here is Hakk's own escalation checkpoint, not a statutory deadline. What the CAR does fix are the amounts: denied boarding attracts 200% of the booked one-way basic fare plus airline fuel charge capped at ₹10,000 where an alternate flight departs within 24 hours, or 400% capped at ₹20,000 where it departs later or where the passenger declines the alternate and takes a full refund (Para 3.2.2); cancellation without the notice required by Para 3.3.1 attracts, in addition to a full refund, ₹5,000 or the booked one-way basic fare plus fuel charge whichever is less for a block time up to 1 hour, ₹7,500 for more than 1 and up to 2 hours, and ₹10,000 beyond 2 hours (Para 3.3.2); involuntary downgrading attracts 75% of the ticket cost including taxes on a domestic sector, and 30%, 50% or 75% on international sectors of up to 1500 km, 1500–3500 km, and over 3500 km respectively (Para 3.5.1). No compensation is payable where the disruption arises from extraordinary circumstances beyond the airline's control as described in Paras 1.4 and 1.5, or where the passenger gave no contact details at booking (Para 3.3.3).",
+      "source_url": "https://www.dgca.gov.in/digigov-portal/?page=jsp/dgca/InventoryList/headerblock/drs/dgcaCAR.jsp",
+      "required_documents": [
+        "Ticket or e-ticket showing PNR, fare breakup and booked schedule",
+        "Boarding pass, or the check-in confirmation if boarding was denied",
+        "The airline's SMS or email notifying the cancellation, delay or change, with its timestamp",
+        "Receipts for meals, transport or hotel paid for out of pocket during the disruption",
+        "Any compensation or voucher already offered by the airline, and your response to it"
+      ],
+      "price_paise": 4900
+    },
+    {
+      "key": "airline_appellate_authority",
+      "name": "Appeal to the Airline's Appellate Authority",
+      "authority": "Appellate Authority of the operating airline",
+      "summary": "The second internal rung the CAR requires every airline to maintain, separate from the Nodal Officer. Exhausting it makes the record complete before the grievance leaves the airline for AirSewa or a Commission.",
+      "deadline_days": 15,
+      "ack_hours": null,
+      "regulation": "DGCA CAR Section 3, Series M, Part IV — Para 3.10.4",
+      "regulation_note": "Para 3.10.4 requires each airline to appoint an Appellate Authority alongside the Nodal Officer, to settle passenger grievances in a stipulated time frame, with the details of both displayed conspicuously on the airline's website. As with the Nodal Officer, the CAR obliges the appointment but does not itself state the time frame, so the window below is Hakk's own escalation checkpoint rather than a statutory figure. The entitlement being claimed does not change at this rung — it remains the amount fixed by Para 3.2.2, 3.3.2 or 3.5.1 as applicable, and the unique reference number issued under Para 3.10.5 at the previous stage should be quoted.",
+      "source_url": "https://www.dgca.gov.in/digigov-portal/?page=jsp/dgca/InventoryList/headerblock/drs/dgcaCAR.jsp",
+      "required_documents": [
+        "Copy of the Stage 1 complaint and the unique reference number issued for it",
+        "Proof the Stage 1 complaint was delivered, and the airline's reply if any",
+        "A single-page computation of the amount claimed under the applicable CAR paragraph"
+      ],
+      "price_paise": 4900
+    },
+    {
+      "key": "air_sewa",
+      "name": "AirSewa Grievance (Ministry of Civil Aviation)",
+      "authority": "AirSewa portal, Ministry of Civil Aviation",
+      "summary": "Government grievance portal and app for air travel, expressly named in the CAR as a route open to passengers. It is a facilitation channel that routes the grievance to the airline and to DGCA oversight — it does not adjudicate or pass a binding order.",
+      "deadline_days": 30,
+      "ack_hours": null,
+      "regulation": "DGCA CAR Section 3, Series M, Part IV — Para 3.9.2",
+      "regulation_note": "Para 3.9.2 provides that the passenger may file the grievance on the AirSewa App or Portal. The CAR fixes no timeline for AirSewa's handling of a grievance and gives it no adjudicatory power, so the 30 days shown here is Hakk's own operational checkpoint rather than a legal deadline. Its value is evidentiary and supervisory: the docket demonstrates a genuine pre-litigation attempt at the Commission stage, and Para 3.10.6 separately requires airlines to report their denied-boarding, cancellation and delay numbers to DGCA by the tenth of each month, which is the oversight this channel feeds.",
+      "source_url": "https://airsewa.gov.in/",
+      "required_documents": [
+        "Complete correspondence trail from the Nodal Officer and Appellate Authority stages",
+        "Ticket, PNR and proof of the disruption",
+        "A single-page summary of the relief sought and the CAR paragraph relied on"
+      ],
+      "price_paise": 4900
+    },
+    {
+      "key": "consumer_commission",
+      "name": "District Consumer Commission (e-Daakhil)",
+      "authority": "District Consumer Disputes Redressal Commission",
+      "summary": "Formal adjudicatory complaint filed online through e-Daakhil. The CAR itself creates the entitlement but provides no forum that can enforce it — this is where a binding order comes from. It is a litigation step, and the point at which legal representation is usually worth considering.",
+      "deadline_days": 21,
+      "ack_hours": null,
+      "regulation": "Consumer Protection Act, 2019 — Sections 34, 35, 36(2) and 69, read with DGCA CAR Section 3, Series M, Part IV, Para 3.9.3",
+      "regulation_note": "Para 3.9.3 of the CAR states that a passenger who is not satisfied with the resolution of the grievance by the airline and/or AirSewa has liberty to complain to any statutory body or court set up under the relevant applicable laws — for a passenger, that is the Commission under the Consumer Protection Act, 2019. Section 34(1) gives the District Commission jurisdiction where the consideration paid does not exceed one crore rupees. Section 35 sets out who may file and how. Section 36(2)'s second proviso requires admissibility to be decided 'ordinarily... within twenty-one days from the date on which the complaint was filed.' Section 69(1) bars a complaint filed more than two years after the cause of action arose, unless delay is condoned under Section 69(2) for sufficient cause. The compensation fixed by Paras 3.2.2, 3.3.2 and 3.5.1 of the CAR is pleaded here as the measure of the entitlement denied.",
+      "source_url": "https://edaakhil.nic.in/",
+      "required_documents": [
+        "Complete case file from all previous stages",
+        "Affidavit verifying the complaint",
+        "Index of documents with page numbering",
+        "Proof of payment of the prescribed filing fee"
+      ],
+      "price_paise": 4900
+    }
+  ]
+}

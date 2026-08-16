@@ -1,0 +1,77 @@
+{
+  "sector": "insurance",
+  "label": "Insurance",
+  "blurb": "Life, health and general insurance — rejected or delayed claims, mis-sold policies, premium and policy-servicing disputes.",
+  "primary_statute": "Insurance Ombudsman Rules, 2017 (as amended to 18.5.2021)",
+  "bundle_price_paise": 12900,
+  "keywords": [
+    "insurance", "insurer", "policy", "premium", "claim", "claim rejected",
+    "claim repudiated", "repudiation", "mediclaim", "health insurance",
+    "life insurance", "term plan", "motor insurance", "own damage", "third party",
+    "cashless", "reimbursement", "tpa", "third party administrator", "sum insured",
+    "policyholder", "surrender value", "maturity", "lapsed policy", "irdai",
+    "lic", "hdfc life", "icici prudential", "sbi life", "max life", "bajaj allianz",
+    "star health", "niva bupa", "care health", "new india assurance",
+    "oriental insurance", "united india", "national insurance", "ombudsman",
+    "pre-existing disease", "waiting period", "mis-sold", "policy not issued"
+  ],
+  "stages": [
+    {
+      "key": "insurer_grievance",
+      "name": "Written Representation to the Insurer",
+      "authority": "Grievance Redressal Officer of the insurer or insurance broker",
+      "summary": "A written representation to the insurer (or broker) itself — by letter, email, or through their online grievance portal. This rung is mandatory: the Insurance Ombudsman cannot take up a complaint until it has been made and the insurer has either rejected it, replied unsatisfactorily, or let a month pass in silence.",
+      "deadline_days": 30,
+      "ack_hours": null,
+      "regulation": "Insurance Ombudsman Rules, 2017 — Rule 14(3)(a)",
+      "regulation_note": "Rule 14(3)(a) makes a complaint to the Insurance Ombudsman incompetent unless the complainant has first made a representation in writing, by electronic mail, or online through the insurer's or broker's website, and one of three things has followed: the insurer rejected the complaint (sub-clause (i)), no reply was received within one month of the insurer receiving the representation (sub-clause (ii)), or the complainant is not satisfied with the reply given (sub-clause (iii)). The 30 days shown here is that one-month silence period — cross it and the Ombudsman becomes available, but a rejection or an unsatisfactory reply opens that door immediately, without waiting.",
+      "source_url": "https://www.cioins.co.in/",
+      "required_documents": [
+        "Policy schedule or certificate of insurance showing the policy number",
+        "The claim intimation and claim number, with the date it was filed",
+        "The insurer's rejection or repudiation letter, if one was issued",
+        "Bills, discharge summary or loss estimate supporting the amount claimed",
+        "Premium payment receipts covering the period of the incident"
+      ],
+      "price_paise": 4900
+    },
+    {
+      "key": "insurance_ombudsman",
+      "name": "Insurance Ombudsman (Council for Insurance Ombudsmen)",
+      "authority": "Office of the Insurance Ombudsman having territorial jurisdiction",
+      "summary": "Free complaint to the Insurance Ombudsman for the territory covering either the insurer's branch or your own address. No fees are payable and no lawyer is needed. The Ombudsman can award compensation up to ₹30 lakh, and the award binds the insurer.",
+      "deadline_days": 90,
+      "ack_hours": null,
+      "regulation": "Insurance Ombudsman Rules, 2017 — Rules 13(1), 14 and 17",
+      "regulation_note": "Rule 13(1) lists what the Ombudsman may hear, including delay in settlement of claims, partial or total repudiation of a claim, disputes over premium, misrepresentation of policy terms, policy-servicing grievances, and non-issuance of a policy after premium was received. Rule 14(1) and (2) allow the complaint to be signed and sent in writing, by electronic mail, or filed online through the Council for Insurance Ombudsmen's website. Rule 14(3)(b) requires it to be filed within one year of the insurer's rejection, of the unsatisfactory decision, or of the expiry of the one-month reply period — with Rule 14(4) letting the Ombudsman condone delay for recorded reasons. Rule 14(5) bars the complaint if the same subject matter is pending before or was disposed of by a court, consumer forum or arbitrator. On outcome: Rule 16(1) gives a mediated recommendation within one month of both sides consenting in writing to mediation; failing mediation, Rule 17(4) requires the award within three months of the Ombudsman receiving all requirements from the complainant, capped by Rule 17(3)(ii) at ₹30 lakh including relevant expenses, and Rule 17(6) obliges the insurer to comply within thirty days of receiving it. The 90 days shown here is that three-month award window under Rule 17(4).",
+      "source_url": "https://www.cioins.co.in/Complaint/Online",
+      "required_documents": [
+        "Copy of the written representation made to the insurer, with proof of sending",
+        "The insurer's reply or rejection letter, or proof the one-month period lapsed",
+        "Complete policy document including terms, conditions and exclusions",
+        "Statement computing the amount claimed and the relief sought",
+        "Declaration that the same matter is not pending before any court, consumer forum or arbitrator"
+      ],
+      "price_paise": 4900
+    },
+    {
+      "key": "consumer_commission",
+      "name": "District Consumer Commission (e-Daakhil)",
+      "authority": "District Consumer Disputes Redressal Commission",
+      "summary": "Formal adjudicatory complaint filed online through e-Daakhil. The Ombudsman's award binds the insurer but not you — if it is unsatisfactory, or if you would rather not go to the Ombudsman at all, this is the forum that can pass a binding order. It is a litigation step, and the point at which legal representation is usually worth considering.",
+      "deadline_days": 21,
+      "ack_hours": null,
+      "regulation": "Consumer Protection Act, 2019 — Sections 34, 35, 36(2) and 69",
+      "regulation_note": "There is no appeal against an Insurance Ombudsman's award: the award binds the insurer, and a complainant who is dissatisfied with it retains the ordinary recourse to law, which for a consumer is the Commission under the Consumer Protection Act, 2019. Section 34(1) gives the District Commission jurisdiction where the consideration paid does not exceed one crore rupees. Section 35 sets out who may file and how. Section 36(2)'s second proviso requires admissibility to be decided 'ordinarily... within twenty-one days from the date on which the complaint was filed.' Section 69(1) bars a complaint filed more than two years after the cause of action arose, unless delay is condoned under Section 69(2). Note the one-way bar in Rule 14(5) of the Ombudsman Rules: going to a consumer forum first shuts the Ombudsman out, but going to the Ombudsman first does not shut this forum out.",
+      "source_url": "https://edaakhil.nic.in/",
+      "required_documents": [
+        "Complete case file from all previous stages",
+        "The Insurance Ombudsman's award or recommendation, if one was passed",
+        "Affidavit verifying the complaint",
+        "Index of documents with page numbering",
+        "Proof of payment of the prescribed filing fee"
+      ],
+      "price_paise": 4900
+    }
+  ]
+}

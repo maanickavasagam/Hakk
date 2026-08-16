@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#FAFAF8" />
+    <meta
+      name="description"
+      content="Hakk — an autonomous agent that drafts, files and escalates your consumer complaint through the right regulatory ladder."
+    />
+    <title>Hakk — consumer disputes, resolved</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..700;1,9..144,300..600&family=Inter:wght@300..700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link
+      rel="icon"
+      href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='9' fill='%23A5D6A7'/%3E%3Cpath d='M10 9v14M10 16h12M22 9v14' stroke='%23263F2A' stroke-width='2.6' stroke-linecap='round'/%3E%3C/svg%3E"
+    />
+    <!--
+      Set the theme before the first paint. If this ran inside React instead,
+      the page would paint light and then snap to dark on mount — a flash that
+      is far more jarring than the load itself. Kept dependency-free and inline
+      on purpose so it executes before any stylesheet or bundle resolves.
+    -->
+    <script>
+      (function () {
+        try {
+          var stored = localStorage.getItem('hakk.theme');
+          var setting = ['light', 'dark', 'system'].indexOf(stored) >= 0 ? stored : 'system';
+          var dark =
+            setting === 'dark' ||
+            (setting === 'system' &&
+              window.matchMedia('(prefers-color-scheme: dark)').matches);
+          document.documentElement.setAttribute('data-theme', dark ? 'dark' : 'light');
+          if (dark) {
+            document
+              .querySelector('meta[name="theme-color"]')
+              .setAttribute('content', '#161815');
+          }
+        } catch (e) {
+          document.documentElement.setAttribute('data-theme', 'light');
+        }
+      })();
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>
